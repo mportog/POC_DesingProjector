@@ -19,7 +19,7 @@ namespace HoloToolkit.Examples.InteractiveElements
     /// InteractiveEffects are behaviors that listen for updates from Interactive, which allows for visual feedback to be customized and placed on
     /// individual elements of the Interactive GameObject
     /// </summary>
-    public class Interactive : MonoBehaviour, IInputClickHandler, IFocusable, IInputClick
+    public class Interactive : MonoBehaviour, IInputClickHandler, IFocusable, IInputHandler
     {
 
         public GameObject ParentObject;

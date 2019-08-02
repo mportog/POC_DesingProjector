@@ -10,7 +10,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
     /// Test MonoBehaviour that simply prints out a message very time a supported event is received from the input module.
     /// This is used to make sure that the input module routes events appropriately to game objects.
     /// </summary>
-    public class InputTest : MonoBehaviour, IInputClickHandler, IInputClick, IFocusable, ISourceStateHandler, IHoldHandler, IManipulationHandler, INavigationHandler, IPointerClickHandler
+    public class InputTest : MonoBehaviour, IInputClickHandler, IInputHandler, IFocusable, ISourceStateHandler, IHoldHandler, IManipulationHandler, INavigationHandler, IPointerClickHandler
     {
         [Tooltip("Set to true if gestures update (ManipulationUpdated, NavigationUpdated) should be logged. Note that this can impact performance.")]
         public bool LogGesturesUpdateEvents = false;

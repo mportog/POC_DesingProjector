@@ -7,9 +7,9 @@ using HoloToolkit.Unity.InputModule;
 namespace HoloToolkit.Unity.Tests
 {
     [RequireComponent(typeof(SetGlobalListener))]
-    public class HapticsTest : MonoBehaviour, IInputClickHandler
+    public class HapticsTest : MonoBehaviour, IInputHandler
     {
-        void IInputClickHandler.OnInputDown(InputEventData eventData)
+        void IInputHandler.OnInputDown(InputEventData eventData)
         {
             InteractionInputSource inputSource = eventData.InputSource as InteractionInputSource;
             if (inputSource != null)
@@ -26,7 +26,7 @@ namespace HoloToolkit.Unity.Tests
             }
         }
 
-        void IInputClickHandler.OnInputUp(InputEventData eventData)
+        void IInputHandler.OnInputUp(InputEventData eventData)
         {
             InteractionInputSource inputSource = eventData.InputSource as InteractionInputSource;
             if (inputSource != null)

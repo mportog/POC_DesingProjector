@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace HoloToolkit.Unity.InputModule.Tests
 {
-    public class InputHandleCallbackFX : MonoBehaviour, IInputClickHandler
+    public class InputHandleCallbackFX : MonoBehaviour, IInputHandler
     {
         [SerializeField]
         private ParticleSystem particles = null;
@@ -15,12 +15,12 @@ namespace HoloToolkit.Unity.InputModule.Tests
             InputManager.Instance.PushFallbackInputHandler(gameObject);
         }
 
-        void IInputClickHandler.OnInputDown(InputEventData eventData)
+        void IInputHandler.OnInputDown(InputEventData eventData)
         {
             // Nothing.
         }
 
-        void IInputClickHandler.OnInputUp(InputEventData eventData)
+        void IInputHandler.OnInputUp(InputEventData eventData)
         {
             if (eventData.PressType == InteractionSourcePressInfo.Select)
             {
@@ -35,5 +35,6 @@ namespace HoloToolkit.Unity.InputModule.Tests
                 }
             }
         }
+
     }
 }
